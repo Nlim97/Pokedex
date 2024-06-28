@@ -35,13 +35,13 @@ function Pokemon ({ name }){
     }
 
     if(error){
-       return <h2>{"error:" + error.message}</h2>
+       return <h2>Please enter valid pokemon name</h2>
     }
     if(loading){
         return <h2>loading .....</h2>
     }
     return(
-        <PokemonCard pokeData={pokeData} description={description}/>
+        <PokemonCard pokeData={pokeData} description={description} name={name}/>
     )
 }
 

@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Pokemon from '../components/Pokemon'
-import Search from '../components/Search'
+import { Route, Routes } from 'react-router-dom'
+import Stats from '../components/Stats'
+import Home from '../components/Home'
 
 function App() {
   const [search, setSearch] = useState("")
-
   return (
+    <>
+      <Routes>
+        <Route path='/' element={<Home search={search} setSearch={setSearch}/>}/>
+        <Route path='/:name/stats' element={<Stats />}/>
+      </Routes>
+    </>
       
-      <div className='main'>
-        <h1>Pokedex</h1>
-        <Search setSearch={setSearch}/>
-        <Pokemon name={search}/>
-      </div>
+      
       
     
   )
