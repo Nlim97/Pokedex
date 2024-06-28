@@ -1,0 +1,63 @@
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+body{
+  background-image: url('/assets/forest.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1{
+  margin-bottom: 60px;
+  color: rgb(223, 72, 72);
+  font-size: 5rem;
+}
+.main input{
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+.main button{
+  border-radius: 10px;
+  padding: 5px;
+}
+img{
+  height: 200px;
+  margin-top: 0;
+  border: black solid 2px;
+  border-radius: 10px;
+
+}
+.pokeCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin: 0;
+  width: 30%;
+  border: black solid 2px;
+  border-radius: 10px;
+
+}
+.pokeCard h2{
+  margin-top: 5px;
+}
+.pokeCard p{
+  margin-top: 5px;
+  padding: 5px;
+  border: black solid 2px;
+  border-radius: 10px;
+}
