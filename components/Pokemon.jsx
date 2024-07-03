@@ -16,13 +16,13 @@ function Pokemon ({ name }){
             try{
                 const { data } = await req.get(`/pokemon/${name}`)
                 const desc = await req.get(`/pokemon-species/${name}`)
-                setDescription(desc.data.flavor_text_entries[0].flavor_text)
+                setDescription(desc.data.flavor_text_entries[0].flavor_text);
                 setPokeData(data)
                 setLoading(false)
                 setError(null)
             }catch(err){
                 setLoading(false)
-                setError(err)
+                setError(err.message)
             }
             
         }
@@ -30,16 +30,16 @@ function Pokemon ({ name }){
 
     },[name])
 
-    if(pokeData.length === 0 && description.length === 0){
-        return <h2>Search the pokemon you want to find</h2>
+    if (!name) {
+        return <h2>Search for the Pokémon you want to find.</h2>;
+    }
+    if (loading) {
+        return <h2>Loading...</h2>;
+    }
+    if (error) {
+        return <h2>{`No such pokemon`}</h2>;
     }
 
-    if(error){
-       return <h2>Please enter valid pokemon name</h2>
-    }
-    if(loading){
-        return <h2>loading .....</h2>
-    }
     return(
         <PokemonCard pokeData={pokeData} description={description} name={name}/>
     )
