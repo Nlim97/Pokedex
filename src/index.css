@@ -7,7 +7,7 @@
 
 }
 body{
-  background-image: url('/assets/forest.jpg');
+  background-image: url('../public/background.jpeg');
   background-size: cover; 
   background-repeat: no-repeat;
 }
@@ -21,8 +21,11 @@ body{
 }
 h1{
   margin-bottom: 60px;
-  color: rgb(223, 72, 72);
+  color: rgb(238, 30, 30);
   font-size: 5rem;
+}
+h2{
+  color: rgba(255, 255, 255, 0.878);
 }
 .main input{
   border-radius: 10px;
@@ -33,12 +36,13 @@ h1{
 .main button{
   border-radius: 10px;
   padding: 5px;
+  background-color: #1877F2;
+  color: white;
 }
 img{
   height: 200px;
   padding: 7px;
   margin-top: 0;
-  border: black solid 2px;
   border-radius: 10px;
 
 }
@@ -49,7 +53,8 @@ img{
   padding: 5px;
   margin: 0;
   width: 30%;
-  border: black solid 2px;
+  border: white solid 2px;
+  background-color: yellow;
   border-radius: 10px;
 
 }
@@ -58,7 +63,42 @@ img{
 }
 .pokeCard p{
   margin-top: 5px;
-  padding: 5px;
+  padding: 10px;
   border: black solid 2px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+.pokeCard button{
+  width: 20%;
+  background-color: blueviolet;
+  color: white;
+}
+.stats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.stats img{
+  border: none;
+}
+.stats button{
+  margin-top: 20px;
+  width: 20%;
+  border-radius: 5px; 
+  height: 30px;
+  background-color: #1877F2;
+  color: white;
+}
+@media(max-width: 850px){
+  .pokeCard{
+    width: 50%;
+  }
+}
+@media (max-width: 650px){
+  .pokeCard{
+    width: 70%;
+  }
+  .pokeCard img{
+    width: 200px;
+  }
 }

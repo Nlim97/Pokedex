@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Chart from "react-google-charts";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Stats (){
+    const navigate = useNavigate()
     const location = useLocation()
     const [stats, setStats] = useState([])
     const options = {
@@ -25,6 +26,8 @@ function Stats (){
     },[location])
 
     return (
+      <div className="stats">
+        <img src={location.state.data.sprites.other.dream_world.front_default}/>
         <Chart
           chartType="BarChart"
           width="100%"
@@ -32,6 +35,9 @@ function Stats (){
           data={stats}
           options={options}
         />
+        <button onClick={() => { navigate('/')}}>Home</button>
+      </div>
+        
       );
     
 }

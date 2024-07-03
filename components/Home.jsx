@@ -1,7 +1,7 @@
 import Pokemon from "./Pokemon";
 import Search from "./Search";
 
-function Home({search, setSearch}){
+function Home({search, setSearch}){    
     return(
         <div className='main'>
           <h1>Pokedex</h1>
