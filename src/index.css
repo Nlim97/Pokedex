@@ -7,7 +7,7 @@
 
 }
 body{
-  background-image: url('../public/background.jpeg');
+  background-image: url('/background.jpeg');
   background-size: cover; 
   background-repeat: no-repeat;
 }
@@ -59,18 +59,28 @@ img{
 
 }
 .pokeCard h2{
+  color: black;
   margin-top: 5px;
 }
 .pokeCard p{
   margin-top: 5px;
   padding: 10px;
-  border: black solid 2px;
+  text-align: center;
+  background-color: antiquewhite;
   border-radius: 5px;
 }
 .pokeCard button{
   width: 20%;
   background-color: blueviolet;
   color: white;
+}
+.types{
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+}
+.types p{
+  background-color: beige;
 }
 .stats{
   display: flex;
@@ -91,14 +101,17 @@ img{
 }
 @media(max-width: 850px){
   .pokeCard{
-    width: 50%;
+    width: 300px;
   }
 }
-@media (max-width: 650px){
+@media (max-width: 480px){
   .pokeCard{
     width: 70%;
   }
   .pokeCard img{
-    width: 200px;
+    width: 180px;
+  }
+  .types{
+    width: 100px;
   }
 }
