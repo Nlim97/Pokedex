@@ -13,13 +13,14 @@ function Pokemon ({ name }){
    
     useEffect(() => {
         const fetchPokemon = async () => {
+            setLoading(true)
+            setError(null)
             try{
                 const { data } = await req.get(`/pokemon/${name}`)
                 const desc = await req.get(`/pokemon-species/${name}`)
                 setDescription(desc.data.flavor_text_entries[0].flavor_text);
-                setPokeData(data)
                 setLoading(false)
-                setError(null)
+                setPokeData(data)
             }catch(err){
                 setLoading(false)
                 setError(err.message)

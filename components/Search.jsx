@@ -4,7 +4,7 @@ function Search({ setSearch }){
     const [pokemon, setPokemon] = useState("")
     function handleSubmit(event){
         event.preventDefault()
-        setSearch(pokemon)
+        setSearch(pokemon.toLowerCase())
     }
     return(
         <form onSubmit={(event) => {
